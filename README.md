@@ -1,4 +1,4 @@
-# Customer Retention & Churn Analysis (Task 2)
+# Customer Retention & Churn Analysis 
 
 ## Overview
 This project analyzes churn patterns and retention drivers for a subscription-based business. It includes:
