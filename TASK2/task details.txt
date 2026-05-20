@@ -1,0 +1,19 @@
+### Project Overview
+This task focused on identifying churn patterns and retention drivers for a subscription-based business. I have generated a dataset of 2,000 customers and analyzed their behavior to provide actionable business recommendations.
+
+### Implemented Solution
+1. Data Generation
+
+- Created customer_churn_data.csv using generate_churn_data.py .
+- Dataset includes: Tenure, Churn Reasons, Support Tickets, Usage Frequency, and Subscription Plans (Basic, Standard, Premium).
+2. Churn Analysis Engine
+
+- Developed analyze_churn.py to extract key insights:
+  - Churn Rate : 29.05%
+  - Average CLV : $212.95
+  - Top Churn Reason : Price too high
+  - Correlation : High support ticket volume correlates with increased churn risk.
+3. Visualizations & Reporting
+
+- Generated professional charts in the assets folder.
+- Compiled a comprehensive Retention_Analysis_Report.md with deep-dive insights and strategic recommendations.

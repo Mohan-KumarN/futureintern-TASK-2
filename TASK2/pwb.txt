@@ -1,0 +1,31 @@
+### Power BI Step-by-Step Instructions (Task 2)
+To create a professional Retention Dashboard in Power BI, follow these steps:
+
+Step 1: Data Setup
+
+1. Open Power BI Desktop and import customer_churn_data.csv .
+2. In Power Query (Transform Data):
+   - Set IsChurned to a Whole Number (0 or 1).
+   - Ensure SignupDate and ChurnDate are Date types.
+3. DAX Measure (Optional but Recommended) : Create a measure for Churn Rate: Churn Rate % = DIVIDE(SUM(Table[IsChurned]), COUNT(Table[CustomerID]))
+Step 2: Executive KPI Cards
+
+1. Add Card visuals for:
+   - Churn Rate % (using the DAX measure above).
+   - Average Tenure (Average of TenureMonths ).
+   - Total Revenue (Sum of TotalCharges ).
+Step 3: Churn Drivers (Visuals)
+
+1. Bar Chart (Horizontal) : Use ChurnReason on the Y-axis and CustomerID (Count) on the X-axis. Filter the visual to only show IsChurned = 1 .
+2. Clustered Column Chart : Use Plan on the X-axis and Churn Rate % on the Y-axis to see which subscription tiers are failing.
+3. Scatter Chart : Use SupportTickets on the X-axis and TenureMonths on the Y-axis, with IsChurned as the Legend . This shows the "danger zone" where high tickets lead to early exits.
+Step 4: Cohort & Lifecycle
+
+1. Line Chart : Use SignupDate (Month/Year) on the X-axis and CustomerID (Count) on the Y-axis to see acquisition trends.
+2. Treemap : Use UsageFrequency as the Group and CustomerID (Count) as the Values to see the health of your active user base.
+Step 5: Professional Formatting
+
+1. Theme : Use the "Storm" or "High Contrast" theme for a data-heavy professional look.
+2. Slicers : Add slicers for Plan , UsageFrequency , and SignupDate .
+3. Conditional Formatting : In your Bar Charts, set the color to change to Red if the Churn Rate exceeds a certain threshold (e.g., 30%).
+You can now use these instructions to build the dashboard and present the Retention_Analysis_Report.md insights interactively!
